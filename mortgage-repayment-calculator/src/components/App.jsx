@@ -1,8 +1,8 @@
-import "./index.css";
+import "../index.css";
 function App() {
   return (
     <>
-      <div>
+      <div className="font-PlusJakartaSans">
         <h1 className="text-3xl font-bold underline">Hello world!</h1>
       </div>
     </>

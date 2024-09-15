@@ -2,7 +2,12 @@
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        PlusJakartaSans: ["Plus Jakarta Sans"],
+        PlusJakartaSansItalic: ["Plus Jakarta Sans Italic"],
+      },
+    },
   },
   plugins: [],
 };
