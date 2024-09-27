@@ -1,9 +1,10 @@
 import "../index.css";
+import MortgageCalculator from "./MortgageCalculator";
 function App() {
   return (
     <>
       <div className="font-PlusJakartaSans">
-        <h1 className="text-3xl font-bold underline">Hello world!</h1>
+        <MortgageCalculator />
       </div>
     </>
   );
