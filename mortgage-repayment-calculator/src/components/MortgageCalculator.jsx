@@ -36,7 +36,7 @@ export default function MortgageCalculator() {
   }
 
   return (
-    <div className="flex justify-center items-center md:bg-Slate-300 h-[100dvh] mt-8 md:mt-0">
+    <div className="md:flex md:justify-center md:items-center md:bg-Slate-300 h-[100dvh]">
       <div className="md:flex max-w-4xl bg-White md:rounded-3xl md:overflow-hidden">
         <Calculator
           amount={amount}
