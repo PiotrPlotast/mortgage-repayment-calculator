@@ -8,7 +8,6 @@ export default function Calculator({
   setRate,
   type,
   setType,
-  setCalculated,
   onClear,
   onCalculateResults,
 }) {
@@ -35,7 +34,7 @@ export default function Calculator({
         <label htmlFor="amount" className="font-bold text-Slate-700 ">
           Mortgage Amount
         </label>
-        <div className="overflow-hidden border border-Slate-700 flex justify-between rounded mt-2 mb-6 ">
+        <div className="overflow-hidden border border-Slate-700 flex justify-between rounded mt-2 mb-6 focus-within:border-Lime">
           <input
             required
             type="number"
@@ -53,7 +52,7 @@ export default function Calculator({
             <label htmlFor="term" className="font-bold text-Slate-700 ">
               Mortgage Term
             </label>
-            <div className="overflow-hidden border border-Slate-700 flex justify-between rounded mt-2 mb-6">
+            <div className="overflow-hidden border border-Slate-700 flex justify-between rounded mt-2 mb-6 focus-within:border-Lime">
               <input
                 required
                 type="number"
@@ -71,7 +70,7 @@ export default function Calculator({
             <label htmlFor="rate" className="font-bold text-Slate-700 ">
               Interest Rate
             </label>
-            <div className="overflow-hidden border border-Slate-700 flex justify-between rounded mt-2 mb-6">
+            <div className="overflow-hidden border border-Slate-700 flex justify-between rounded mt-2 mb-6 focus-within:border-Lime">
               <input
                 required
                 type="number"
@@ -88,26 +87,48 @@ export default function Calculator({
         </div>
         <div className="flex flex-col gap-2 md:items-start">
           <span className="font-bold  text-Slate-700">Mortgage Type</span>
-          <div className="border border-Slate-900 rounded px-4 py-2 flex gap-4 md:w-full">
+          <div
+            className="border border-Slate-900 rounded px-4 py-2 flex gap-4 md:w-full hover:border-Lime hover:bg-Lime-hover"
+            style={
+              type === "repayment"
+                ? {
+                    "background-color": "hsla(61, 70%, 52%, 0.2)",
+                    border: "1px solid hsl(61, 70%, 52%)",
+                  }
+                : {}
+            }
+          >
             <input
               type="radio"
               name="type"
               id="type"
+              checked={type === "repayment"}
               defaultChecked
               onClick={() => setType("repayment")}
-              className=""
+              className="radio translate-y-[3px]"
             />
             <label className="font-bold w-full" htmlFor="type">
               Repayment
             </label>
           </div>
-          <div className="border border-Slate-900 rounded px-4 py-2 flex gap-4 md:w-full">
+          <div
+            className="border border-Slate-900 rounded px-4 py-2 flex gap-4 md:w-full hover:border-Lime hover:bg-Lime-hover"
+            style={
+              type === "interest-only"
+                ? {
+                    "background-color": "hsla(61, 70%, 52%, 0.2)",
+                    border: "1px solid hsl(61, 70%, 52%)",
+                  }
+                : {}
+            }
+          >
             <input
               type="radio"
               name="type"
               id="type2"
+              checked={type === "interest-only"}
               onClick={() => setType("interest-only")}
-              className=""
+              className="radio translate-y-[3px]"
             />
             <label className="font-bold w-full" htmlFor="type2">
               Interest Only
