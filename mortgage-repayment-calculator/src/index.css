@@ -12,3 +12,22 @@
     src: url(/fonts/PlusJakartaSans-Italic-VariableFont_wght.ttf) format("woff");
   }
 }
+
+@layer components {
+  .radio {
+    appearance: none;
+    font: inherit;
+    width: 1.15em;
+    height: 1.15em;
+    border: 2px solid hsl(200, 24%, 40%);
+    border-radius: 9999px;
+    background-clip: content-box;
+    padding: 0.15em;
+  }
+  .radio:checked {
+    background-color: hsl(61, 70%, 52%);
+    border-color: hsl(61, 70%, 52%);
+    background-clip: content-box;
+    padding: 0.15em;
+  }
+}
