@@ -92,7 +92,7 @@ export default function Calculator({
             style={
               type === "repayment"
                 ? {
-                    "background-color": "hsla(61, 70%, 52%, 0.2)",
+                    backgroundColor: "hsla(61, 70%, 52%, 0.2)",
                     border: "1px solid hsl(61, 70%, 52%)",
                   }
                 : {}
@@ -103,7 +103,7 @@ export default function Calculator({
               name="type"
               id="type"
               checked={type === "repayment"}
-              defaultChecked
+              onChange={() => setType("repayment")}
               onClick={() => setType("repayment")}
               className="radio translate-y-[3px]"
             />
@@ -116,7 +116,7 @@ export default function Calculator({
             style={
               type === "interest-only"
                 ? {
-                    "background-color": "hsla(61, 70%, 52%, 0.2)",
+                    backgroundColor: "hsla(61, 70%, 52%, 0.2)",
                     border: "1px solid hsl(61, 70%, 52%)",
                   }
                 : {}
@@ -126,6 +126,7 @@ export default function Calculator({
               type="radio"
               name="type"
               id="type2"
+              onChange={() => setType("interest-only")}
               checked={type === "interest-only"}
               onClick={() => setType("interest-only")}
               className="radio translate-y-[3px]"
