@@ -5,7 +5,7 @@
 
 
 # Mortgage repayment calculator
-Frontend mentor challange. 
+Design taken from frontend mentor. 
 
 Page live at: 
 https://mortgage-repayment-calculator-x65d.vercel.app/
